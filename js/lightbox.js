@@ -168,7 +168,8 @@ lightbox = new Lightbox options
           title: $link.attr('title')
         });
       } else {
-        _ref = $($link.prop("tagName") + '[rel="' + $link.attr('rel') + '"]');
+        var rel = ($link.attr('rel').match(/lightbox\[[A-z]*[0-9]*\]*/));
+        _ref = $($link.prop("tagName") + '[rel*="' + rel + '"]');
         for (i = 0, _len = _ref.length; i < _len; i++) {
           a = _ref[i];
           this.album.push({
