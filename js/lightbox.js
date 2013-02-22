@@ -49,7 +49,7 @@ lightbox = new Lightbox options
 
   LightboxOptions = (function() {
 
-    function LightboxOptions() {
+    function LightboxOptions(url) {
       this.fileLoadingImage = url + '/img/loading.gif';
       this.fileCloseImage = url + '/img/close.png';
       this.resizeDuration = 700;
